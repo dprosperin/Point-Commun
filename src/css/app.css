@@ -1,0 +1,14 @@
+/* carousel logo sponsors */
+.logo-sponsor {
+    height: 100%;
+    max-width: 100%;
+    display: block;
+    margin-right: 10px
+}
+.inner{
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0;
+}
+/* /carousel logo sponsors */
