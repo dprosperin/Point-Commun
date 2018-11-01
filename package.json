@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --mode=development",
-    "build": "webpack --mode=production",
+    "dev": "webpack-dev-server --plugin common-config-webpack-plugin --mode=development",
+    "build": "webpack --plugin common-config-webpack-plugin --mode=production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -14,6 +14,7 @@
     "yarn": "^1.12.1"
   },
   "devDependencies": {
+    "common-config-webpack-plugin": "^0.4.4",
     "html-webpack-plugin": "^3.2.0",
     "webpack": "^4.23.1",
     "webpack-cli": "^3.1.2",
