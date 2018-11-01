@@ -1,0 +1,7 @@
+/node_modules
+/.tmp
+/.cache
+desktop.ini
+Thumbs.db
+.DS_Store
+*.exe 
