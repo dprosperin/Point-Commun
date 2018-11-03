@@ -1,10 +1,21 @@
-import $  from 'jquery';
+// Init the library
+import $ from 'jquery';
+import 'popper.js';
+import 'bootstrap';
+import Flickity from 'flickity';
+import Rellax from 'rellax';
+// Import png
+import arrowUp from './images/arrowUp.png';
+import arrowDown from './images/arrowDown.png';
+import facebook from './images/facebook.png';
+import twitter from './images/twitter.png';
+// Init css
+import 'bootstrap/dist/css/bootstrap.min.css';
 import 'flickity/css/flickity.css';
 import './css/app.css';
-import fabric from 'fabric/dist/fabric';
-import Flickity from 'flickity';
 
-const flky = new Flickity('.carousel', {
+let rellax = new Rellax('.rellax');
+let flky = new Flickity('.carousel', {
     pageDots: false,
     prevNextButtons: false,
     wrapAround: true,
@@ -13,32 +24,41 @@ const flky = new Flickity('.carousel', {
     percentPosition: false
 })
 
-var c = new fabric.Canvas(canvas,{
-    selection: false, 
-    height:	window.innerHeight, 
-    width:window.innerWidth
-   }),
-  options = {
-      distance: 10,
-      width: c.width,
-      height: c.height,
-      param: {
-        stroke: '#ebebeb',
-        strokeWidth: 1,
-        selectable: false
+// Smooth-Scrolling
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
       }
-   },
-      gridLen = options.width / options.distance;
-
-  for (var i = 0; i < gridLen; i++) {
-    var distance   = i * options.distance,
-        horizontal = new fabric.Line([ distance, 0, distance, options.width], options.param),
-        vertical   = new fabric.Line([ 0, distance, options.width, distance], options.param);
-    c.add(horizontal);
-    c.add(vertical);
-    if(i%5 === 0){
-      horizontal.set({stroke: '#cccccc'});
-      vertical.set({stroke: '#cccccc'});
-    };
-  };
+    }
+  });
+  // /Smooth-Scrolling
 $('.date').text(new Date().getFullYear())

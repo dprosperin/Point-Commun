@@ -9,21 +9,89 @@ body {
     display: block;
     margin-right: 10px
 }
-.inner{
+#flickity>.inner{
     width: 100%;
     max-width: 980px;
     margin: 0 auto;
     padding: 0;
 }
 /* /carousel logo sponsors */
-.img-top {
-    width: 100%;
-    height: 70vh;
+#img1 {
+    border-radius: 0;
+    height: 100vh;
     background-position: center center;
     background-size: cover;
+    background-image: url(https://picsum.photos/g/1280/720/?random);
+    background-attachment: fixed;
+    background-color: #334D5C;
 }
-.section1 {
+/*article1*/
+#article1 {
+    height: 100%;
     width: 100%;
-    height: 80vh;
-    background-color: #334D5C
+    background-position: center center;
+    background-size: cover;
+    /*background-image: url(https://picsum.photos/g/1280/720/?random);*/
+    background-color: #334D5C;
+}
+#article1>.inner {
+    width: 80%;
+    margin: 0 auto;
+}
+#article1>.inner #one {
+    background-color: rgba(43,43,43, 0.2);
+}
+#article1>.inner #two {
+    background-color: rgba(56,56,56, 0.2);
+}
+#article1>.inner #three {
+    background-color: rgba(56,56,56, 0.2);
+}
+
+#article1>.inner #four {
+    background-color: rgba(43,43,43, 0.2);
+}
+/*/article1*/
+/* Icon footer  social networks*/
+ul.icons li{
+    text-align: center;
+    display: inline-block;
+}
+ul.icons {
+    text-align: center;
+    cursor: default;
+    padding-left: 0px;
+    list-style: none;
+}
+.icon {
+    position: relative;
+    width: 2.586rem; 
+    height: auto;
+    display: inline;
+    text-decoration: none;
+    border-bottom: none;
+}
+#footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+/* /Icon footer  social networks*/
+/*arrowLinkBottom*/
+.arrowLinkBottom {
+    margin: 0 auto; 
+    bottom: 0; 
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.arrowLinkBottom p, .arrowLinkBottom a {
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+.arrowLinkBottom p:hover, .arrowLinkBottom a:hover {
+    text-align: center;
+    text-decoration: none;
 }

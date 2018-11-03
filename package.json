@@ -8,12 +8,14 @@
     "build": "webpack --plugin common-config-webpack-plugin --mode=production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "David Prospérin",
   "license": "ISC",
   "dependencies": {
-    "fabric": "^2.4.2-b",
+    "bootstrap": "^4.1.3",
     "flickity": "^2.1.2",
     "jquery": "^3.3.1",
+    "popper.js": "^1.14.4",
+    "rellax": "^1.7.1",
     "yarn": "^1.12.1"
   },
   "devDependencies": {
