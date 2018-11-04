@@ -1,4 +1,5 @@
 var HTMLPlugin =  require("html-webpack-plugin");
+
 module.exports = {
     plugins: [
         new HTMLPlugin({
@@ -18,9 +19,18 @@ module.exports = {
                 'og:image:type' : 'image/png',
                 'og:url' : '<url>'
             },
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true,
+                removeRedundantAttributes: true,
+                removeScriptTypeAttributes: true,
+                removeStyleLinkTypeAttributes: true,
+                useShortDoctype: true
+            },
             hash: true,
             showErrors: true,
             
-        })
+        }),
+        
     ]
 } 

@@ -5,10 +5,11 @@ import 'bootstrap';
 import Flickity from 'flickity';
 import Rellax from 'rellax';
 // Import png
-import arrowUp from './images/arrowUp.png';
-import arrowDown from './images/arrowDown.png';
-import facebook from './images/facebook.png';
-import twitter from './images/twitter.png';
+import  './images/grid.png';
+import  './images/arrowUp.png';
+import  './images/arrowDown.png';
+import  './images/facebook.png';
+import  './images/twitter.png';
 // Init css
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'flickity/css/flickity.css';
