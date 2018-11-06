@@ -6,7 +6,7 @@
 </head>
 <body>
     <!-- NavBar -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
         <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -35,14 +35,13 @@
     <!--/NavBar-->
     <main role="main">
         <!--Image-->
-        <section class="jumbotron mb-0 pb-0 w-100" id="img1">
-            <div class="inner rellax" data-rellax-speed="5">
-                <h1 class="display-3 mb-5">Point Commun</h1>
+        <section class="jumbotron mb-0 w-100" id="img1">
+            <div class="inner rellax mt-5" data-rellax-speed="5">
+                <h1 class="display-3 mb-lg-5 mb-xs-1">Point Commun</h1>
                 <p class="lead">Reprehenderit excepteur ad sit cupidatat amet duis irure ullamco et.</p>
             </div>
-             
              <!-- arrowLinkBottom -->
-            <div class="arrowLinkBottom">
+            <div class="arrowLinkBottom mb-4">
                 <a href="#article1">
                     <p class="lead text-center text-white">EN SAVOIR PLUS</p>
                     <img class="text-center" src="./static/media/arrowDown.251465b3.png" alt="arrow go down">
@@ -83,7 +82,7 @@
         <!-- article-->
         <article class="container-fluid my-0 py-5" id="article1">
             <div class="inner">
-                 <h2 class="display-3 text-center text-white">Lorem ipsum :</h2>
+                 <h2 class="display-4 text-center text-white">Lorem ipsum :</h2>
                 <div class="row my-5">
                     <div class="col-lg-6 text-white py-5" id="one">
                         <h3 class="display-3 text-center">1.</h3>
@@ -109,6 +108,25 @@
             </div>
         </article>
         <!-- /article1-->
+        <!-- article2 -->
+        <article class="py-5" id="article2">
+            <div class="inner">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img src="https://dummyimage.com/150x150&text=Author" alt="" srcset="" class="rounded-circle mx-auto d-block mb-lg-3">
+                        <p class="lead text-center">Eiusmod do sint dolor amet exercitation mollit ad reprehenderit eiusmod.</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="https://dummyimage.com/150x150&text=Author" alt="" srcset="" class="rounded-circle mx-auto d-block mb-lg-3">
+                        <p class="lead text-center">Eiusmod do sint dolor amet exercitation mollit ad reprehenderit eiusmod.</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="https://dummyimage.com/150x150&text=Author" alt="" srcset="" class="rounded-circle mx-auto d-block mb-lg-3">
+                        <p class="lead text-center">Eiusmod do sint dolor amet exercitation mollit ad reprehenderit eiusmod.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
     </main>
     <!-- footer -->
     <footer class="text-muted bg-dark" id="footer">

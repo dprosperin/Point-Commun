@@ -32,6 +32,16 @@ body {
     margin: 0 auto;
     width: 100%;
 }
+#img1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(43,43,43, 0.5);
+    height: 100%;
+}
 /*article1*/
 #article1 {
     height: 100%;
@@ -59,6 +69,15 @@ body {
     background-color: rgba(43,43,43, 0.2);
 }
 /*/article1*/
+/* article2 */
+#article2 {
+    max-height: 50vh;
+    background-color: #fff;
+}
+#article2>.inner {
+    width: 95%
+}
+/* /article2 */
 /* Icon footer  social networks*/
 ul.icons li{
     text-align: center;
