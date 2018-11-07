@@ -2,6 +2,16 @@
 body {
     font-family: 'Ubuntu', sans-serif;
 }
+/* class global */
+.inner {
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+}
+.bg-transparent {
+    background-color: transparent !important;
+}
+/* /class global */
 /* carousel logo sponsors */
 .logo-sponsor {
     height: 100%;
@@ -9,11 +19,9 @@ body {
     display: block;
     margin-right: 10px
 }
-#flickity>.inner{
+#flickity .inner{
     width: 100%;
     max-width: 980px;
-    margin: 0 auto;
-    padding: 0;
 }
 /* /carousel logo sponsors */
 #img1 {
@@ -26,10 +34,7 @@ body {
     background-color: #334D5C;
 }
 #img1 .inner{
-    text-align: center;
     color: whitesmoke;
-    position: relative;
-    margin: 0 auto;
     width: 100%;
 }
 #img1::before {
@@ -51,31 +56,31 @@ body {
     background-repeat: repeat;
     background-color: #334D5C;
 }
-#article1>.inner {
+#article1 .inner {
     width: 80%;
-    margin: 0 auto;
 }
-#article1>.inner #one {
+#article1 #one {
     background-color: rgba(43,43,43, 0.2);
 }
-#article1>.inner #two {
+#article1 #two {
     background-color: rgba(56,56,56, 0.2);
 }
-#article1>.inner #three {
+#article1 #three {
     background-color: rgba(56,56,56, 0.2);
 }
 
-#article1>.inner #four {
+#article1 #four {
     background-color: rgba(43,43,43, 0.2);
 }
 /*/article1*/
 /* article2 */
 #article2 {
-    max-height: 50vh;
+    height: 100%;
+    width: 100%;
     background-color: #fff;
 }
-#article2>.inner {
-    width: 95%
+#article2 .inner {
+    width: 95%;
 }
 /* /article2 */
 /* Icon footer  social networks*/
@@ -121,3 +126,8 @@ ul.icons {
     text-align: center;
     text-decoration: none;
 }
+/* navbar */
+.navbar {
+    transition: background 0.3s;
+}
+/* /navbar */

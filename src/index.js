@@ -1,9 +1,3 @@
-// Init the library
-import $ from 'jquery';
-import 'popper.js';
-import 'bootstrap';
-import Flickity from 'flickity';
-import Rellax from 'rellax';
 // Import png
 import  './images/grid.png';
 import  './images/arrowUp.png';
@@ -11,9 +5,8 @@ import  './images/arrowDown.png';
 import  './images/facebook.png';
 import  './images/twitter.png';
 // Init css
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'flickity/css/flickity.css';
 import './css/app.css';
+import './css/app.scss';
 
 let rellax = new Rellax('.rellax');
 let flky = new Flickity('.carousel', {
@@ -61,5 +54,19 @@ $('a[href*="#"]')
       }
     }
   });
+
+// Scroll Navbar Animation
+$(window).scroll(function() {
+  if ($(window).scrollTop() == 0) {
+    $('.navbar').removeClass('bg-dark').addClass('bg-transparent')
+  } else {
+    $('.navbar').removeClass('bg-transparent').addClass('bg-dark')
+  }
+})
+if ($(window).scrollTop() == 0) {
+  $('.navbar').removeClass('bg-dark').addClass('bg-transparent')
+} else {
+  $('.navbar').removeClass('bg-transparent').addClass('bg-dark')
+}
   // /Smooth-Scrolling
 $('.date').text(new Date().getFullYear())
