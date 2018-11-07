@@ -5,7 +5,7 @@ import  './images/arrowDown.png';
 import  './images/facebook.png';
 import  './images/twitter.png';
 // Init css
-import './css/app.css';
+//import './css/app.css';
 import './css/app.scss';
 
 let rellax = new Rellax('.rellax');
@@ -58,15 +58,15 @@ $('a[href*="#"]')
 // Scroll Navbar Animation
 $(window).scroll(function() {
   if ($(window).scrollTop() == 0) {
-    $('.navbar').removeClass('bg-dark').addClass('bg-transparent')
+    $('.navbar').removeClass('bg-active').addClass('bg-transparent')
   } else {
-    $('.navbar').removeClass('bg-transparent').addClass('bg-dark')
+    $('.navbar').removeClass('bg-transparent').addClass('bg-active')
   }
 })
 if ($(window).scrollTop() == 0) {
-  $('.navbar').removeClass('bg-dark').addClass('bg-transparent')
+  $('.navbar').removeClass('bg-active').addClass('bg-transparent')
 } else {
-  $('.navbar').removeClass('bg-transparent').addClass('bg-dark')
+  $('.navbar').removeClass('bg-transparent').addClass('bg-active')
 }
   // /Smooth-Scrolling
 $('.date').text(new Date().getFullYear())
