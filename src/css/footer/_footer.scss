@@ -1,0 +1,25 @@
+@charset 'utf-8';
+// Icon footer  social networks
+ul.icons {
+    text-align: center;
+    cursor: default;
+    padding-left: 0px;
+    list-style: none;
+    li {
+      text-align: center;
+      display: inline-block;
+    }
+    .icon {
+      position: relative;
+      width: 2.586rem; 
+      height: auto;
+      display: inline;
+      text-decoration: none;
+      border-bottom: none;
+    }
+}
+#footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: $sf-color-theme-dark;
+}
