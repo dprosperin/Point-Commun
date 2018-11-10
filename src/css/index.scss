@@ -5,8 +5,29 @@
 @import 'navbar/navbar';
 @import 'jumbotron/jumbotron';
 
-body {
-  overflow-x: hidden;
+/// @author David Prospérin
+
+@mixin selection($color, $bckColr) {
+  ::selection {
+    color: $color;
+    background-color: $bckColr;
+    text-shadow: none;
+  }
+  ::-moz-selection {
+    color: $color;
+    background-color: $bckColr;
+    text-shadow: none;
+  }
+  ::-ms-selection {
+    color: $color;
+    background-color: $bckColr;
+    text-shadow: none;
+  }
+  ::-o-selection {
+    color: $color;
+    background-color: $bckColr;
+    text-shadow: none;
+  }
 }
 // class gloabal
 .inner {
@@ -15,3 +36,12 @@ body {
     width: 100%;
     text-align: center;
 }
+.underline:after {
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: #919bac;
+  content: "";
+  margin: 13px auto 0;
+}
+@include selection($sf-color-theme-dark, $sf-color-theme-white)
