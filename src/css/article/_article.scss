@@ -1,0 +1,45 @@
+@charset 'utf-8';
+
+// carousel logo sponsors
+#flickity {
+    background-color: #fff;
+  .logo-sponsor {
+    height: 100%;
+    max-width: 100%;
+    display: block;
+    margin-right: 10px;
+  }
+  .inner {
+      width: 80%;
+      max-width: 980px;
+  }
+}
+
+// article1
+#article1 {
+  background-size: 3%;
+  background-image: url("./images/grid.png");
+  background-repeat: repeat;
+  background-color: $infographic-color-theme-dark;
+  .inner {
+      width: 90%;
+  }
+  #one {
+    background-color: rgba(43,43,43, 0.2);
+  }
+  #two {
+    background-color: rgba(56,56,56, 0.2);
+  }
+  #three {
+    background-color: rgba(56,56,56, 0.2);
+  }
+  #four {
+    background-color: rgba(43,43,43, 0.2);
+  }
+}
+// article2
+#article2 {
+    .inner {
+        width: 80%;
+    }
+}

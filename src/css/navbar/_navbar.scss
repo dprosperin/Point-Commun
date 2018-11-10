@@ -1,0 +1,8 @@
+@charset 'utf-8';
+// navbar 
+.navbar {
+    transition: background 0.3s;
+    &.bg-active {
+      background-color: $infographic-color-theme-green;
+    }
+  }
