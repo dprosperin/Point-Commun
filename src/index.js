@@ -4,9 +4,10 @@ import  './images/arrowUp.png';
 import  './images/arrowDown.png';
 import  './images/facebook.png';
 import  './images/twitter.png';
+import './images/techno.png'
 // Init css
 //import './css/app.css';
-import './css/app.scss';
+import './css/index.scss';
 
 let rellax = new Rellax('.rellax');
 let flky = new Flickity('.carousel', {
@@ -14,7 +15,7 @@ let flky = new Flickity('.carousel', {
     prevNextButtons: false,
     wrapAround: true,
     autoPlay: true,
-    imagesLoaded: false, 
+    imagesLoaded: false,
     percentPosition: false
 })
 
@@ -26,8 +27,8 @@ $('a[href*="#"]')
   .click(function(event) {
     // On-page links
     if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      && 
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+      &&
       location.hostname == this.hostname
     ) {
       // Figure out element to scroll to
@@ -54,7 +55,6 @@ $('a[href*="#"]')
       }
     }
   });
-
 // Scroll Navbar Animation
 $(window).scroll(function() {
   if ($(window).scrollTop() == 0) {
