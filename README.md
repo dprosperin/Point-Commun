@@ -4,7 +4,6 @@
 * Bootstrap
 * Flickity
 * Jquery
-* Rellax
 * Polyfill.io
 * Scss
 * Webpack 4

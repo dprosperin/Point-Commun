@@ -1,12 +1,20 @@
 $(document).ready(function() {
-  let rellax = new Rellax('.rellax');
   let flky = new Flickity('.carousel', {
       pageDots: false,
       prevNextButtons: false,
       wrapAround: true,
-      autoPlay: true,
+      autoPlay: 1500,
+      cellAlign: 'center',
       imagesLoaded: false,
-      percentPosition: false
+      percentPosition: false,
+      adaptiveHeight: true,
+      freeScrollFriction: 0.03,
+      imagesLoaded: true,
+      accessibility: false,
+      setGallerySize: false,
+      fullscreen: false,
+      pauseAutoPlayOnHover: false,
+      freeScroll: true,
   })
 
   // Smooth-Scrolling
