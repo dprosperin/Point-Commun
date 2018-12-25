@@ -7,7 +7,7 @@
     background-position: center center;
     background-size: cover;
     background-image: url(https://picsum.photos/1280/720/?random);
-    /*background-attachment: fixed;*/
+    background-attachment: fixed;
     background-color: $infographic-color-theme-blue;
     &::before {
       content: '';
@@ -24,13 +24,13 @@
     }
     // arrowLinkBottom
     .arrowLinkBottom {
-      margin: 0 auto; 
-      bottom: 0; 
+      margin: 0 auto;
+      bottom: 0;
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
       text-align: center;
-    }
+     }
      a {
       text-align: center;
       text-decoration: none;

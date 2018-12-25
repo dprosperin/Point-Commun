@@ -6,7 +6,6 @@ import  './images/facebook.png';
 import  './images/twitter.png';
 import './images/techno.png';
 // Init css
-//import './css/app.css';
 import './css/index.scss';
 // Load Javascript
-import './app.js';
+import './script/app.js';

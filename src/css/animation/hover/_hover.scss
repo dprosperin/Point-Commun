@@ -1,0 +1,19 @@
+@charset 'utf-8';
+
+#article2 {
+  & .user-photo {
+    transition: transform .23s cubic-bezier(0,1,.33,1.28);
+  }
+  & .user-photo + p.lead {
+   transition: margin-top .55s;
+  }
+  & .user-photo:hover,
+  & .user-photo:active {
+    border: none;
+    transform: scale(1.2, 1.2);
+  }
+  & .user-photo:hover + p.lead,
+  & .user-photo:active + p.lead {
+    margin-top: 0.2987em;
+  }
+}

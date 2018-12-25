@@ -1,41 +1,24 @@
 @charset 'utf-8';
+/// @author David Prospérin
+
+@import 'mixins/mixins';
 @import 'colors/colors';
 @import 'footer/footer';
-@import 'article/article';
+@import 'articles/articles';
 @import 'navbar/navbar';
 @import 'jumbotron/jumbotron';
 
-/// @author David Prospérin
+// Optional
+@import 'animation/hover/hover';
 
-@mixin selection($color, $bckColr) {
-  ::selection {
-    color: $color;
-    background-color: $bckColr;
-    text-shadow: none;
-  }
-  ::-moz-selection {
-    color: $color;
-    background-color: $bckColr;
-    text-shadow: none;
-  }
-  ::-ms-selection {
-    color: $color;
-    background-color: $bckColr;
-    text-shadow: none;
-  }
-  ::-o-selection {
-    color: $color;
-    background-color: $bckColr;
-    text-shadow: none;
-  }
-}
 // class gloabal
 .inner {
-    position: relative;
-    margin: 0 auto;
-    width: 100%;
-    text-align: center;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
 }
+
 .underline:after {
   display: block;
   width: 100px;
@@ -44,4 +27,5 @@
   content: "";
   margin: 13px auto 0;
 }
-@include selection($sf-color-theme-dark, $sf-color-theme-white)
+
+@include selection($sf-color-theme-dark, $infographic-color-theme-green)
