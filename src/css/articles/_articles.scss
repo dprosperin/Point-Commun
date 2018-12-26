@@ -1,5 +1,12 @@
 @charset 'utf-8';
 
+// Bg grid
+#article1, #article2 {
+  background-size: 3%;
+  background-image: url("./images/grid.png");
+  background-repeat: repeat;
+  background-color: $infographic-color-theme-dark;
+}
 // carousel logo sponsors
 #flickity {
   background-color: $white;
@@ -32,10 +39,6 @@
 
 // article1
 #article1 {
-  background-size: 3%;
-  background-image: url("./images/grid.png");
-  background-repeat: repeat;
-  background-color: $infographic-color-theme-dark;
   margin: 0;
   padding: 5em;
   & h3 {
@@ -53,9 +56,27 @@
     margin-top: 4vh;
   }
 }
-
 // article2
 #article2 {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  & h3 {
+    font-size: 2.9em;
+    text-align: center;
+  }
+  & #wave {
+    bottom: 0;
+    width: 100%;
+  }
+  & .inner {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+// article3
+#article3 {
   margin: 0;
 
   & .inner {
