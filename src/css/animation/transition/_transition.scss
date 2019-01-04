@@ -1,7 +1,7 @@
 @charset 'utf-8';
 
 #article3 {
-  & .user-photo {
+  .user-photo {
     /**transition: transform ease-in 0.3s cubic-bezier(0,.23,.99,.01),
                 border-style ease-in 0.2s cubic-bezier(0,.23,.99,.01);**/
     transition: transform .23s cubic-bezier(0,1,.33,1.28), opacity .23s cubic-bezier(0,1,.33,1.28);

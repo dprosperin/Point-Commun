@@ -8,4 +8,14 @@ import './images/techno.png';
 // Init css
 import './css/index.scss';
 // Load Javascript
-import './script/app.js';
+import app from './script/app.js';
+
+$(document).ready(function() {
+    app.initSmoothScrolling()
+    $(window).scroll(function() {
+        app.toggleNavbarTransparent();
+    });
+    app.toggleNavbarTransparent()
+    $('.date').text(new Date().getFullYear())
+});
+
