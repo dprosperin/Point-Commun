@@ -1,7 +1,7 @@
 @charset 'utf-8';
 
 // img Jumbotron
-#img1 {
+#img1, #img2 {
     border-radius: 0;
     height: 100vh;
     background-position: center center;
@@ -19,25 +19,42 @@
       background-color: rgba(43,43,43, 0.5);
       height: 100%;
     }
-    .lead, .display-3, .display-2, .display-4 {
-        color: $sf-color-theme-white;
-    }
-    // arrowLinkBottom
-    .arrowLinkBottom {
-      margin: 0 auto;
-      bottom: 0;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      text-align: center;
-     }
-     a {
-      text-align: center;
+    
+  }
+#img1 {
+  .lead, .display-3, .display-2, .display-4 {
+    color: $sf-color-theme-white;
+  }
+  // arrowLinkBottom
+  .arrowLinkBottom {
+  margin: 0 auto;
+  bottom: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  }
+  a {
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    &:hover {
       text-decoration: none;
-      text-transform: uppercase;
-      margin-bottom: 0;
-      &:hover {
-          text-decoration: none;
-      }
     }
   }
+}
+#img2 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  height: 75vh;
+  background-attachment: fixed;
+   #arrow-down {
+    top: 0;
+    padding: 0;
+    margin-top: 0;
+    height: 100px;
+    width: 100%;
+  }
+}
