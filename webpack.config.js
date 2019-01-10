@@ -1,6 +1,12 @@
 var HTMLPlugin =  require("html-webpack-plugin");
 
 module.exports = {
+    module: {
+        rules: [{
+          test: /\.less$/,
+          loader: 'less-loader'
+        }]
+      },
     plugins: [
         new HTMLPlugin({
             title: 'Point Commun',
@@ -16,7 +22,8 @@ module.exports = {
                 'description' : '<description>',
                 'og:image' : 'logoPointCommun.png',
                 'og:image:type' : 'image/png',
-                'og:url' : '<url>'
+                'og:url' : '<url>',
+                'og:locale' : '<local>'
             },
             minify: {
                 collapseWhitespace: true,

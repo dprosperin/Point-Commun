@@ -25,6 +25,7 @@ app.initSmoothScrolling = function(){
   // Remove links that don't actually link to anything
   .not('[href="#"]')
   .not('[href="#0"]')
+  .not('.tabs a')
   .click(function(event) {
     // On-page links
     if (
@@ -89,4 +90,17 @@ app.toggleNavbarTransparent = function(){
       .addClass('bg-transparent')
     }
   })
+}
+app.goTab = function(a) {
+    var div = a.parent().parent().parent()
+    var li = a.parent()
+
+    if (li.hasClass("active")) {
+      return false;
+    }
+    
+    div.find(".tabs .active").removeClass("active")
+    li.addClass("active")
+    div.find(".tab-content.active").removeClass("active")
+    div.find(a.attr("href")).addClass("active")
 }
