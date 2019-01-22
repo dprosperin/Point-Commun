@@ -1,8 +1,8 @@
 @charset 'utf-8';
 /// @author David Prospérin
 
-@import 'mixins/mixins';
 @import 'colors/colors';
+@import 'root';
 @import 'footer/footer';
 @import 'articles/articles';
 @import 'navbar/navbar';
@@ -11,26 +11,6 @@
 // Optional
 @import 'animation/hover/hover';
 
-// class gloabal
-a, a:hover, a:focus  {
-  text-decoration: none;
-  color: inherit;
+:root {
+  @extend %selection;
 }
-
-.inner {
-  position: relative;
-  margin: 0 auto;
-  width: 100%;
-  text-align: center;
-}
-
-.underline:after {
-  display: block;
-  width: 100px;
-  height: 3px;
-  background: #919bac;
-  content: "";
-  margin: 13px auto 0;
-}
-
-@include selection($sf-color-theme-dark, $infographic-color-theme-green)

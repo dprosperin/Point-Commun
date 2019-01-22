@@ -1,5 +1,4 @@
 @charset 'utf-8';
-
 // User photo
 .user-photo {
   display: block;
@@ -8,9 +7,28 @@
   height: auto;
   text-align: center;
   border: 0.39em solid $white;
+  & + p.lead {
+    transition: margin-top .55s;
+  }
+  #article-2 & {
+    margin-top: 1.6996887em;
+    width: 15vw;
+  }
+}
+// Inner
+.inner {
+  #article-2 & {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 1.5364em;
+    height: 100%;
+  }
+  #article-3 & {
+    width: 80%;
+  }
 }
 // Bg grid
-#article1, #article2 {
+#article-1, #article-2 {
   background-size: 3%;
   background-image: url("./images/grid.png");
   background-repeat: repeat;
@@ -20,35 +38,28 @@
 // carousel logo sponsors
 #sponsor {
   background-color: $white;
-
-   .inner {
-     .carousel {
-      position: relative;
-      height: 5.5vw;
-      max-width: 100vw;
-      margin: 0 auto;
-
-       .flickity-viewport {
-        transition: height 0.2s;
-
-           .logo-sponsor {
-            top: 50%;
-            height: 100%;
-            display: block;
-            transform: translateY(-50%);
-
-          }
+  .carousel {
+    position: relative;
+    height: 5.5vw;
+    max-width: 100vw;
+    margin: 0 auto;
+    .flickity-viewport {
+      transition: height 0.2s;
+      .logo-sponsor {
+        top: 50%;
+        height: 100%;
+        display: block;
+        transform: translateY(-50%);
       }
     }
-     p {
-      color: $sf-color-theme-grey;
-      font-size: 1.2rem;
-    }
+  }
+  p {
+    color: $sf-color-theme-grey;
+    font-size: 1.2rem;
   }
 }
-
-// article1
-#article1 {
+// article-1
+#article-1 {
   margin: 0;
   padding: 5em;
    h3 {
@@ -65,9 +76,17 @@
     width: 30vw;
     margin-top: 4vh;
   }
+  .underline:after {
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: #919bac;
+    content: "";
+    margin: 13px auto 0;
+  }
 }
-// article2
-#article2 {
+// article-2
+#article-2 {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -78,16 +97,6 @@
    #wave {
     bottom: 0;
     width: 100%;
-  }
-   .inner {
-    width: 80%;
-    margin: 0 auto;
-    padding-bottom: 1.5364em;
-    height: 100%;
-  }
-   .user-photo {
-    margin-top: 1.6996887em;
-    width: 15vw;
   }
 }
 // Tab system
@@ -131,21 +140,13 @@
     list-style: none;
   }
 }
-
-// article3
-#article3 {
+// article-3
+#article-3 {
   margin: 0;
-
-   .inner {
-    width: 80%;
-  }
-
    p {
     font-size: 1.2rem;
   }
-
    h3 {
     color: $sf-color-theme-grey;
   }
 }
-
