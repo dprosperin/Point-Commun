@@ -32,7 +32,7 @@
   background-size: 3%;
   background-image: url("../images/grid.png");
   background-repeat: repeat;
-  background-color: $infographic-color-theme-dark;
+  background-color: $infographic-dark;
   background-attachment: fixed;
 }
 // carousel logo sponsors
@@ -54,7 +54,7 @@
     }
   }
   p {
-    color: $sf-color-theme-grey;
+    color: $sf-grey;
     font-size: 1.2rem;
   }
 }
@@ -128,7 +128,7 @@
   }
   .tabs .active a{
     text-align: center;
-    color: $sf-color-theme-blue;
+    color: $sf-blue;
   }
   li {
     float: left;
@@ -153,7 +153,7 @@
     font-size: 1.2rem;
   }
    h3 {
-    color: $sf-color-theme-grey;
+    color: $sf-grey;
   }
 }
 

@@ -8,7 +8,7 @@
     background-size: cover;
     background-image: url(https://picsum.photos/1280/720/?random);
     background-attachment: fixed;
-    background-color: $infographic-color-theme-blue;
+    background-color: $infographic-blue;
     &::before {
       content: '';
       position: absolute;
@@ -23,7 +23,7 @@
 #img-1 {
   height: 100vh;
   .lead, .display-3, .display-2, .display-4 {
-    color: $sf-color-theme-white;
+    color: $sf-white;
   }
   // arrowLinkBottom
   .arrowLinkBottom {

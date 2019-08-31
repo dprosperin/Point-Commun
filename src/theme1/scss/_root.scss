@@ -12,26 +12,26 @@ a, a:hover, a:focus  {
 }
 %selection {
     ::selection {
-        color: $sf-color-theme-dark;
-        background-color: $infographic-color-theme-green;
+        color: $sf-dark;
+        background-color: $infographic-green;
         text-shadow: none;
     }
 
     ::-moz-selection {
-        color: $sf-color-theme-dark;
-        background-color: $infographic-color-theme-green;
+        color: $sf-dark;
+        background-color: $infographic-green;
         text-shadow: none;
     }
 
     ::-ms-selection {
-        color: $sf-color-theme-dark;
-        background-color: $infographic-color-theme-green;
+        color: $sf-dark;
+        background-color: $infographic-green;
         text-shadow: none;
     }
 
     ::-o-selection {
-        color: $sf-color-theme-dark;
-        background-color: $infographic-color-theme-green;
+        color: $sf-dark;
+        background-color: $infographic-green;
         text-shadow: none;
     }
 }

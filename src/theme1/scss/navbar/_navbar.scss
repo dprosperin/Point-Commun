@@ -5,11 +5,11 @@
   transition: background 0.3s;
 
   &.bg-active {
-    background-color: $infographic-color-theme-green;
+    background-color: $infographic-green;
   }
   & a.nav-link[href] {
   	&:hover {
-  		border-bottom: 1px solid $infographic-color-theme-dark;
+  		border-bottom: 1px solid $infographic-dark;
   	}
   }
 }
