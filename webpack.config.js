@@ -1,8 +1,15 @@
 var HTMLPlugin =  require("html-webpack-plugin"),
+    path       = require('path'),
     exportModule = {
       entry: {
         theme1: './src/theme1/index.js'
       }, 
+      devServer: {
+        contentBase: path.join(__dirname, 'dist'),
+        compress: true,
+        writeToDisk: true,
+        port: 9000
+      },
       module: {
         rules: [
 	      {
