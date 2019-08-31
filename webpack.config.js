@@ -19,9 +19,10 @@ var HTMLPlugin =  require("html-webpack-plugin"),
 	      {
 	        test: /\.scss/,
 	        use: [
-		      'style-loader',
-		      'css-loader',
-		      'sass-loader'
+		             { loader: 'style-loader', options: { sourceMap: process.env.ENV === 'development' } },
+                 { loader: 'css-loader', options: { sourceMap: process.env.ENV === 'development' } },
+                 { loader: 'postcss-loader', options: { sourceMap: process.env.ENV === 'development' } },
+                 { loader: 'sass-loader', options: { sourceMap: process.env.ENV === 'development' } }
 		     ]
 	      },
           {
@@ -29,7 +30,11 @@ var HTMLPlugin =  require("html-webpack-plugin"),
           },
 	      {
             test: /\.css$/,
-            use: ['style-loader', 'css-loader']
+            use: [
+                  { loader: 'style-loader', options: { sourceMap: process.env.ENV === 'development' } },
+                  { loader: 'css-loader', options: { sourceMap: process.env.ENV === 'development' } },
+                  { loader: 'postcss-loader', options: { sourceMap: process.env.ENV === 'development' } },
+            ]
           },
           {
 	        test: /\.(png|jpe?g|gif)$/,
@@ -73,7 +78,7 @@ global['themes']['theme1'] = {
           useShortDoctype: true
          },
          hash: true,
-         showErrors: process.env.ENV === 'production',
+         showErrors: process.env.ENV === 'development',
      }
 };
 global['themes']['theme2'] = {
@@ -100,7 +105,7 @@ global['themes']['theme2'] = {
           useShortDoctype: true
         },
         hash: true,
-        showErrors: process.env.ENV === 'production',
+        showErrors: process.env.ENV === 'development',
         filename: 'theme2.html',
         template: 'src/theme2/index.ejs',
         //favicon: 'src/theme1/images/logo.png',
