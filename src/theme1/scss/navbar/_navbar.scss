@@ -1,0 +1,15 @@
+@charset 'utf-8';
+
+// navbar 
+#navbar.navbar {
+  transition: background 0.3s;
+
+  &.bg-active {
+    background-color: $infographic-color-theme-green;
+  }
+  & a.nav-link[href] {
+  	&:hover {
+  		border-bottom: 1px solid $infographic-color-theme-dark;
+  	}
+  }
+}

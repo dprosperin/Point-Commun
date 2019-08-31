@@ -1,0 +1,60 @@
+@charset 'utf-8';
+
+// img Jumbotron
+.img {
+    position: relative;
+    border-radius: 0;
+    background-position: center center;
+    background-size: cover;
+    background-image: url(https://picsum.photos/1280/720/?random);
+    background-attachment: fixed;
+    background-color: $infographic-color-theme-blue;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: rgba(43,43,43, 0.5);
+      height: 100%;
+    }
+}
+#img-1 {
+  height: 100vh;
+  .lead, .display-3, .display-2, .display-4 {
+    color: $sf-color-theme-white;
+  }
+  // arrowLinkBottom
+  .arrowLinkBottom {
+    margin: 0 auto;
+    bottom: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+  a {
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+}
+#img-2 {
+  padding: 0;
+  margin: 0;
+  height: 75vh;
+}
+#img-3 {
+  padding: 0;
+  margin: 0;
+  height: 75vh;
+   #arrow-down {
+    top: 0;
+    padding: 0;
+    margin-top: 0;
+    height: 100px;
+    width: 100%;
+  }
+}
