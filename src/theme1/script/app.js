@@ -1,7 +1,4 @@
-var app = {};
-export default app;
-
-app.initFlickity = new Flickity('.carousel', {
+new Flickity('.carousel', {
   pageDots: false,
   prevNextButtons: false,
   wrapAround: true,
@@ -19,8 +16,6 @@ app.initFlickity = new Flickity('.carousel', {
   freeScroll: true,
 })
 
-app.initSmoothScrolling = function(){
-    // Smooth-Scrolling
   $('a[href*="#"]')
   // Remove links that don't actually link to anything
   .not('[href="#"]')
@@ -57,11 +52,9 @@ app.initSmoothScrolling = function(){
       }
     }
   });
-// /Smooth-Scrolling
-}
 
 //Scroll Navbar Animation
-app.toggleNavbarTransparent = function(){
+toggleNavbarTransparent = function(){
   if ($(window).scrollTop() == 0) {
     $('.navbar')
     .removeClass('bg-active')
@@ -91,7 +84,7 @@ app.toggleNavbarTransparent = function(){
     }
   })
 }
-app.goTab = function(a) {
+goTab = function(a) {
     var div = a.parent().parent().parent()
     var li = a.parent()
 
@@ -104,3 +97,86 @@ app.goTab = function(a) {
     div.find(".tab-content.active").removeClass("active")
     div.find(a.attr("href")).addClass("active")
 }
+
+/**
+ * @desc Ipsum permettant d'obtenir un text aléatoire de taille demandé.
+ *       Utilisation de l'API www.randomtext.me/api/
+ * @param {String} Size
+ * @param {String} Words
+ * @pram  {String} Element
+ * @returns {Object}
+ */
+var ipsum = function(words, element, size) {
+  var url_base = "http://www.randomtext.me/api/lorem/";
+  switch (element) {
+    case 'p':
+    case 'paragraphs':
+      element = 'p';
+      var url =  url_base + `${element}-${size}/${words[0]}-${words[1]}`;
+      break;
+    case 'ul':
+    case 'un-ordered list':
+      element = 'ul';
+      var url =  url_base + `${element}-${size}/${words[0]}-${words[1]}`;
+      break;
+    case 'ol':
+    case 'ordered list':
+      element = ol;
+      var url =  url_base + `${element}-${size}/${words[0]}-${words[1]}`;
+      break;
+    case 'h1':
+    case 'heading 1' :
+      element = 'h1'
+      var url =  url_base + `${element}/${words[0]}-${words[1]}`;
+      break;
+    case 'h2':
+    case 'heading 2' :
+      element = 'h2'
+      var url =  url_base + `${element}/${words[0]}-${words[1]}`;
+      break;
+    case 'h3':
+    case 'heading 3' :
+      element = 'h3'
+      var url =  url_base + `${element}/${words[0]}-${words[1]}`;
+      break;
+    case 'h4':
+    case 'heading 4' :
+      element = 'h4'
+      var url =  url_base + `${element}/${words[0]}-${words[1]}`;
+      break;
+    default:
+     var url = url_base;
+     break;
+  }
+  $.getJSON(url, function(data) {
+    data.toString = ()=>data.text_out;
+    return(data)
+  })
+}
+
+
+
+$(document).ready(function() {
+    $(window).scroll(function() {
+        toggleNavbarTransparent();
+    });
+    toggleNavbarTransparent()
+    $('.date').text(new Date().getFullYear())
+
+
+
+    // Init tab system
+    $('.tabs a').click(function(event) {
+        if (event.preventDefault){
+          event.preventDefault();
+        }
+        event.returnValue = false;
+        goTab($(this))
+    })
+    
+    var hash = window.location.hash;
+    var a = $('a[href="'+ hash +'"]')
+    if (a !== null && !a.hasClass("active")) {
+        goTab(a)
+    }
+});
