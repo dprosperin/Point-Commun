@@ -8,7 +8,7 @@ var HTMLPlugin =  require("html-webpack-plugin"),
         contentBase: path.join(__dirname, 'dist'),
         compress: true,
         writeToDisk: true,
-        port: 9000
+        port: 8080
       },
       module: {
         rules: [

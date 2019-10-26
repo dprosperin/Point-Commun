@@ -101,13 +101,13 @@ goTab = function(a) {
 /**
  * @desc Ipsum permettant d'obtenir un text aléatoire de taille demandé.
  *       Utilisation de l'API www.randomtext.me/api/
- * @param {String} Size
- * @param {String} Words
- * @pram  {String} Element
- * @returns {Object}
+ * @param {Array} Words
+ * @param {String} Element 
+ * @param  {String} size
+ * @returns {NodeList}
  */
-var ipsum = function(words, element, size) {
-  var url_base = "http://www.randomtext.me/api/lorem/";
+var ipsum  = function(words, element, size) {
+  var url_base = "https://www.randomtext.me/api/lorem/";
   switch (element) {
     case 'p':
     case 'paragraphs':
@@ -148,24 +148,28 @@ var ipsum = function(words, element, size) {
      var url = url_base;
      break;
   }
-  $.getJSON(url, function(data) {
-    data.toString = ()=>data.text_out;
-    return(data)
-  })
+  return(new Promise((resolve, reject) => {
+    var jqxhr = $.getJSON(url);
+    jqxhr.done((data)=> {
+      data.toString = ()=>data.text_out;
+      //var element = new DOMParser().parseFromString(data.toString(), 'text/html').body.childNodes;
+      var element = document.createRange().createContextualFragment(data.toString());
+      resolve(element);
+    })
+  }));
 }
-
-
-
 $(document).ready(function() {
     $(window).scroll(function() {
         toggleNavbarTransparent();
     });
     toggleNavbarTransparent()
     $('.date').text(new Date().getFullYear())
-
-
-
-    // Init tab system
+    $.each($(".ipsum"), function(index, value){
+      ipsum([5, 9], 'p', 1)
+      .then((element)=>{
+        value.append(element);
+      })
+    });
     $('.tabs a').click(function(event) {
         if (event.preventDefault){
           event.preventDefault();
