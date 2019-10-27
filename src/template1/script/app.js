@@ -104,7 +104,7 @@ goTab = function(a) {
  * @param {Array} Words
  * @param {String} Element 
  * @param  {String} size
- * @returns {NodeList}
+ * @returns {NodeList} 
  */
 var ipsum  = function(words, element, size) {
   var url_base = "https://www.randomtext.me/api/lorem/";
@@ -164,12 +164,6 @@ $(document).ready(function() {
     });
     toggleNavbarTransparent()
     $('.date').text(new Date().getFullYear())
-    $.each($(".ipsum"), function(index, value){
-      ipsum([5, 9], 'p', 1)
-      .then((element)=>{
-        value.append(element);
-      })
-    });
     $('.tabs a').click(function(event) {
         if (event.preventDefault){
           event.preventDefault();
@@ -180,7 +174,14 @@ $(document).ready(function() {
     
     var hash = window.location.hash;
     var a = $('a[href="'+ hash +'"]')
-    if (a !== null && !a.hasClass("active")) {
-        goTab(a)
+    if (a !== null && !a.hasClass("active")) { 
+      goTab(a)
     }
+
+    $.each($(".ipsum"), function(index, value){
+      ipsum([1, 9], 'p', Math.floor(1 + (5-1+1)*Math.random()))
+      .then((element)=>{
+        value.append(element);
+      })            
+    });
 });
